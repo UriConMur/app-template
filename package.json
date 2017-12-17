@@ -1,0 +1,18 @@
+{
+  "title": "AppTitle",
+  "name": "AppName",
+  "version": "1.0.0",
+  "description": "Template Application",
+  "license": "MIT",
+  "contributors": [
+    "Name (name@beliveo.com)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "link for repository"
+  },
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "jquery": "^3.2.1"
+  }
+}

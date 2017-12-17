@@ -1,0 +1,8 @@
+DirectoryIndex src/client/pages/home/index.php
+
+Options -Indexes
+Options +FollowSymlinks
+
+<Files .htaccess>
+deny from all
+</Files>
