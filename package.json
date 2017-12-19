@@ -11,6 +11,10 @@
     "type": "git",
     "url": "link for repository"
   },
+  "scripts": {
+    "sniff": "phpcs src/ & phpcs --report=summary src/",
+    "fix": "phpcbf src/"
+  },
   "dependencies": {
     "font-awesome": "4.7.0",
     "jquery": "^3.2.1"
