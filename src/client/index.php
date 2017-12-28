@@ -10,9 +10,17 @@
  * @license  https://github.com/SDBLV/bbox-login/blob/develop/LICENSE.md MIT
  * @link     http://www.beliveo.net/bbox-login
  */
-$cookie_name = "username";
+
+include '../../config/environment.php';
+
+$cookie_name = "unou";
 if (!isset($_COOKIE[$cookie_name])) {
-    include_once 'pages/home/index.php';
+  header("location: {$_ENV['LOGIN_URL']}?redirect_to={$_ENV['DOMAIN']}/app-template");
 } else {
-    header("location: http://www.beliveo.com");
+    if (isset($_GET['p'])) {
+        $redirect = $_GET['p'];
+        include "pages/{$redirect}/index.html";
+    } else {
+        include 'pages/home/index.html';
+    }
 }

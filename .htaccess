@@ -6,3 +6,5 @@ Options +FollowSymlinks
 <Files .htaccess>
 deny from all
 </Files>
+
+Redirect /app-template/about http://localhost/app-template/?p=about
