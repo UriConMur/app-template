@@ -8,3 +8,4 @@ deny from all
 </Files>
 
 Redirect /app-template/about http://localhost/app-template/?p=about
+Redirect /app-template/swagger http://localhost/app-template/?p=swagger

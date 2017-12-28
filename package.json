@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "font-awesome": "4.7.0",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "swagger-ui": "git+https://github.com/swagger-api/swagger-ui.git"
   },
   "devDependencies": {
     "husky": "^0.14.3"
