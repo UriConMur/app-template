@@ -72,10 +72,12 @@
 <script src="src/client/utils/urlFix/index.js"></script>
 <script>
 window.onload = function() {
-
+  var protocol = window.location.protocol;
+  var host = window.location.hostname;
+  var urlJson = protocol+"//"+host+"/app-template/src/server/src/routes/swagger.json";
   // Build a system
   const ui = SwaggerUIBundle({
-    url: "http://localhost/app-template/src/server/src/routes/swagger.json",
+    url: urlJson,
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
