@@ -12,9 +12,11 @@
     "url": "link for repository"
   },
   "scripts": {
-    "sniff": "phpcs src/ & phpcs --report=summary src/",
-    "fix": "phpcbf src/",
-    "prepush": "phpcs src/ & phpcs --report=summary src/"
+    "fix": "phpcbf --standard=SDStandard src/",
+    "prepush": "npm run sniff",
+    "prepare": "npm install && composer install",
+    "presniff": "phpcs --config-set installed_paths rules",
+    "sniff": "phpcs --standard=SDStandard src/"
   },
   "dependencies": {
     "font-awesome": "4.7.0",

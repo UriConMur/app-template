@@ -23,10 +23,11 @@
  */
 class DataBase
 {
-    private $_db_host = "";
-    private $_db_user = "";
-    private $_db_pass = "";
-    private $_db_name = "";
+
+    private $_db_host = '';
+    private $_db_user = '';
+    private $_db_pass = '';
+    private $_db_name = '';
 
     /**
      * Funciton __construct
@@ -46,7 +47,7 @@ class DataBase
     public function connect()
     {
         $mysql_connect_str = "mysql:host=$this->_db_host; dbname=$this->_db_name; ";
-        $dbConnection = new PDO($mysql_connect_str, $this->_db_user, $this->_db_pass);
+        $dbConnection      = new PDO($mysql_connect_str, $this->_db_user, $this->_db_pass);
         $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $dbConnection;
     }
