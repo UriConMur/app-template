@@ -14,14 +14,13 @@
   "scripts": {
     "fix": "phpcbf --standard=SDStandard src/",
     "prepush": "npm run sniff",
-    "prepare": "npm install & composer install",
     "presniff": "phpcs --config-set installed_paths rules",
     "sniff": "phpcs --standard=SDStandard src/"
   },
   "dependencies": {
     "font-awesome": "4.7.0",
     "jquery": "^3.2.1",
-    "swagger-ui": "git+https://github.com/swagger-api/swagger-ui.git"
+    "beliveo-components": "git+ssh://git@github.com:SDBLV/beliveo-components-library.git"
   },
   "devDependencies": {
     "husky": "^0.14.3"

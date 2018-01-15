@@ -18,7 +18,7 @@ You can download the full package on [Wamp](http://www.wampserver.com/en/)
 [Please add Prerequisites for the application ...]
 
 # Install
-Once you have cloned or download the repository you should run `npm run prepare` to run all dependencies. Your node version should be +8
+Once you have cloned or download the repository you should run `npm install` & `composer install` to run all dependencies. Your node version should be +8
 [Please add instructions to install the application ...]
 
 ## Contributing
