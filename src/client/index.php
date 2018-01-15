@@ -5,9 +5,9 @@
   <link rel="stylesheet" type="text/css" href="src/client/styles/main.css">
 </head>
 <body>
-<?php include_once '../../node_modules/beliveo-components/components/header.php'; ?>
+<?php require_once '../../node_modules/beliveo-components/components/header.php'; ?>
 <div class="body_container">
-  <?php
+    <?php
     require '../../config/environment.php';
     $cookie_name = 'unou';
     if (! isset($_COOKIE[ $cookie_name ])) {
@@ -20,9 +20,9 @@
             include 'pages/home/index.html';
         }
     }
-  ?>
+    ?>
 </div>
 
-<?php include_once '../../node_modules/beliveo-components/components/footer.php'; ?>
+<?php require_once '../../node_modules/beliveo-components/components/footer.php'; ?>
 </body>
 </html>
