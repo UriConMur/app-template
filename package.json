@@ -18,9 +18,9 @@
     "sniff": "phpcs --standard=SDStandard src/"
   },
   "dependencies": {
+    "beliveo-files": "git+https://github.com/SDBLV/beliveo-files.git",
     "font-awesome": "4.7.0",
-    "jquery": "^3.2.1",
-    "beliveo-files": "git+ssh://git@github.com:SDBLV/beliveo-files.git"
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "husky": "^0.14.3"
