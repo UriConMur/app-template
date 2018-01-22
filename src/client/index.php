@@ -23,6 +23,6 @@
     ?>
 </div>
 
-<?php require_once '../../node_modules/beliveo-components/components/footer.php'; ?>
+<?php require_once '../../node_modules/beliveo-files/components/footer.php'; ?>
 </body>
 </html>
