@@ -14,7 +14,7 @@
   "scripts": {
     "fix": "phpcbf --standard=SDStandard src/",
     "prepush": "npm run sniff",
-    "presniff": "phpcs --config-set installed_paths rules",
+    "presniff": "phpcs --config-set installed_paths node_modules/beliveo-files/config/rules",
     "sniff": "phpcs --standard=SDStandard src/"
   },
   "dependencies": {
