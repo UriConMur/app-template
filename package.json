@@ -12,10 +12,11 @@
     "url": "link for repository"
   },
   "scripts": {
+    "install": "composer install && composer global require 'squizlabs/php_codesniffer=*'",
     "fix": "phpcbf --standard=SDStandard src/",
     "prepush": "npm run sniff",
     "presniff": "phpcs --config-set installed_paths node_modules/beliveo-files/config/rules",
-    "sniff": "phpcs --standard=SDStandard src/"
+    "sniff": "npm run fix && phpcs --standard=SDStandard src/"
   },
   "dependencies": {
     "beliveo-files": "git+https://github.com/SDBLV/beliveo-files.git",
