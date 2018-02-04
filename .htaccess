@@ -8,5 +8,5 @@ deny from all
 </Files>
 
 RewriteEngine On
-RewriteRule ^(node_modules|src) http://localhost/app-template/$1 [R]
+RewriteRule ^(node_modules|src)($|/) - [L]
 RewriteRule ^(.+) http://localhost/app-template/?p=$1 [R]
