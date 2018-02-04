@@ -9,10 +9,12 @@
 <?php require_once '../../node_modules/beliveo-files/components/header.php'; ?>
 <div class="body_container">
     <?php
+    session_start();
     require '../../config/environment.php';
     $cookie_name = 'unou';
     if (! isset($_COOKIE[ $cookie_name ])) {
-        header("location: {$_ENV['LOGIN_URL']}?redirect_to={$_ENV['DOMAIN']}/app-template");
+      session_destroy();
+      header("location: {$_ENV['LOGIN_URL']}?redirect_to={$_ENV['DOMAIN']}/app-template");
     } else {
         if (isset($_GET['p'])) {
             $redirect = $_GET['p'];
