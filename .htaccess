@@ -7,5 +7,6 @@ Options +FollowSymlinks
 deny from all
 </Files>
 
-Redirect /app-template/about http://localhost/app-template/?p=about
-Redirect /app-template/swagger http://localhost/app-template/?p=swagger
+RewriteEngine On
+RewriteRule ^(node_modules|src) http://localhost/app-template/$1 [R]
+RewriteRule ^(.+) http://localhost/app-template/?p=$1 [R]
