@@ -8,5 +8,5 @@ deny from all
 </Files>
 
 RewriteEngine On
-RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(node_modules|src) http://localhost/app-template/$1 [R]
 RewriteRule ^(.+) http://localhost/app-template/?p=$1 [R]
