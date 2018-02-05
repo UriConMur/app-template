@@ -4,4 +4,5 @@ package-lock.json
 .DS_Store
 vendor
 composer.lock
+config/environment.php
 nbproject
