@@ -1,0 +1,11 @@
+.test-info {
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: white;
+}
+
+.test-info h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
