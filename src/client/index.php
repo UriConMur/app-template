@@ -11,7 +11,7 @@
 <div class="body_container">
     <?php
     if (session_status() == PHP_SESSION_NONE) {
-      session_start();
+        session_start();
     }
     $cookie_name = 'unou';
     if (! isset($_COOKIE[ $cookie_name ])) {
