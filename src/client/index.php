@@ -3,6 +3,7 @@
 <head>
 <title>Beliveo</title>
   <script src="node_modules/beliveo-files/utils/urlFix/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="node_modules/beliveo-files/styles/main.css">
 </head>
