@@ -20,20 +20,20 @@ require '../../config/environment.php';
   </div>
   <div class="body_container col col-md-10">
     <div class='content'>
-      <?php
-      $cookie_name = 'unou';
-      if (! isset($_COOKIE[ $cookie_name ])) {
-          session_destroy();
-          header("location: {$_ENV['LOGIN_URL']}?redirect_to={$_ENV['DOMAIN']}/{$_ENV['NAME_APP']}");
-      } else {
-          if (isset($_GET['p'])) {
-              $redirect = $_GET['p'];
-              include "pages/{$redirect}/index.php";
-          } else {
-              include 'pages/home/index.php';
-          }
-      }
-      ?>
+        <?php
+        $cookie_name = 'unou';
+        if (! isset($_COOKIE[ $cookie_name ])) {
+            session_destroy();
+            header("location: {$_ENV['LOGIN_URL']}?redirect_to={$_ENV['DOMAIN']}/{$_ENV['NAME_APP']}");
+        } else {
+            if (isset($_GET['p'])) {
+                $redirect = $_GET['p'];
+                include "pages/{$redirect}/index.php";
+            } else {
+                include 'pages/home/index.php';
+            }
+        }
+        ?>
     </div>
   </div>
 </div>
