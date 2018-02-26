@@ -8,12 +8,12 @@ require_once '../../../config/environment.php';
 
 $app = new \Slim\App;
 
-include_once '../src/config/db.php';
-include_once '../src/config/controller.php';
+require_once '../src/config/db.php';
+require_once '../src/config/controller.php';
 
 // Customer Routes
-include_once '../src/routes/page.php';
-include_once '../src/routes/rule.php';
-include_once '../src/routes/permission.php';
+require_once '../src/routes/page.php';
+require_once '../src/routes/rule.php';
+require_once '../src/routes/permission.php';
 
 $app->run();
