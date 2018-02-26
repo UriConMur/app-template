@@ -22,6 +22,9 @@ require '../../config/environment.php';
     <?php require_once '../../node_modules/beliveo-files/components/sideMenu.php'; ?>
   </div>
   <div class="body_container col col-md-10">
+    <div id='topMenu'>
+      <?php require_once '../../node_modules/beliveo-files/components/menuBar.php'; ?>
+    </div>
     <div class='content'>
         <?php
         $cookie_name = 'unou';
