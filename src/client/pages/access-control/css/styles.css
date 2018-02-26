@@ -1,0 +1,73 @@
+.access-control-page {
+
+}
+
+.access-control-page #list_pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.access-control-page #list_pages .page {
+  border: 1px solid silver;
+  border-bottom: 3px solid gray;
+  padding: 40px;
+  margin: 0 20px;
+}
+
+.access-control-page #list_pages .page.active {
+  border-bottom: 3px solid #4294cc;
+  background-color: whitesmoke;
+  font-size: 15px;
+  position: relative;
+  top: -3px;
+}
+
+.access-control-page #list_pages .page:hover {
+  border-bottom: 3px solid #4294cc;
+  position: relative;
+  top: -3px;
+  cursor: pointer;
+}
+
+.access-control-page #permissions {
+  display: none;
+}
+
+.access-control-page .table {
+  font-size: 15px;
+}
+
+.access-control-page .table th {
+  text-align: center;
+}
+
+.access-control-page .table input[type=button] {
+  width: 100%;
+  background-color: #4294cc;
+  color: white;
+  cursor: pointer;
+}
+
+.access-control-page .fa.fa-close {
+  color: red;
+  font-size: 19px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+
+.access-control-page .fa.fa-pencil {
+  color: orange;
+  font-size: 19px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.access-control-page .fa.fa-plus {
+  color: #3b82b6;
+  font-size: 25px;
+  margin: 0 20px;
+  cursor: pointer;
+}

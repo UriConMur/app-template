@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "Swagger App Template",
+    "title": "Application API Documentation",
   },
   "schemes": [
     "http"
@@ -14,135 +14,231 @@
     "application/json"
   ],
   "paths": {
-    "/pets": {
+    "/pages": {
       "get": {
-        "summary": "List all pets",
-        "operationId": "listPets",
+        "summary": "Get list of pages from the app",
         "tags": [
-          "pets"
+          "Page"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Succesfully return an array with the pages information",
+          },
+          "500": {
+            "description": "Internal Server Error",
+          }
+        },
+      }
+    },
+    "/rules/{idPage}": {
+      "get": {
+        "summary": "Get list of rules from the app",
+        "tags": [
+          "Rule"
         ],
         "parameters": [
           {
-            "name": "limit",
-            "in": "query",
-            "description": "How many items to return at one time (max 100)",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
+            "name": "idPage",
+            "in": "path",
+            "required": true,
+            "description": "The ID Page to retrieve the rules",
+            "type": "Integer"
           }
         ],
         "responses": {
           "200": {
-            "description": "An paged array of pets",
-            "headers": {
-              "x-next": {
-                "type": "string",
-                "description": "A link to the next page of responses"
-              }
-            },
-            "schema": {
-              "$ref": "#/definitions/Pets"
-            }
+            "description": "Succesfully return an array with the rules information",
           },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
-            }
+          "500": {
+            "description": "Internal Server Error",
+          }
+        },
+      }
+    },
+    "/permission/position/{idPage}": {
+      "get": {
+        "summary": "Get list of permission positions for a page",
+        "tags": [
+          "Permission"
+        ],
+        "parameters": [
+          {
+            "name": "idPage",
+            "in": "path",
+            "required": true,
+            "description": "The ID Page to retrieve permissions",
+            "type": "Integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of permissions succesfully processed",
+          },
+          "500": {
+            "description": "Internal Server Error",
           }
         }
       },
       "post": {
-        "summary": "Create a pet",
-        "operationId": "createPets",
+        "summary": "Post a permission position for a page",
         "tags": [
-          "pets"
+          "Permission"
+        ],
+        "parameters": [
+          {
+            "name": "idPage",
+            "in": "path",
+            "required": true,
+            "description": "The ID Page to retrieve permissions",
+            "type": "Integer"
+          },
+          {
+            "name": "target",
+            "in": "body",
+            "required": true,
+            "description": "Target element (ID Position) to insert relation in database",
+            "type": "Integer"
+          },
+          {
+            "name": "rules",
+            "in": "body",
+            "required": true,
+            "description": "Set of rules to be applied to the page permission",
+            "type": "Integer"
+          }
         ],
         "responses": {
           "201": {
-            "description": "Null response"
+            "description": "Permission succesfully inserted",
           },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
-            }
+          "500": {
+            "description": "Internal Server Error",
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a permission position for a page",
+        "tags": [
+          "Permission"
+        ],
+        "parameters": [
+          {
+            "name": "idPage",
+            "in": "path",
+            "required": true,
+            "description": "The ID Page to delete permissions",
+            "type": "Integer"
+          },
+          {
+            "name": "target",
+            "in": "body",
+            "required": true,
+            "description": "Target element (ID Position) to delete relation in database",
+            "type": "Integer"
+          },
+        ],
+        "responses": {
+          "200": {
+            "description": "Permission succesfully deleted",
+          },
+          "500": {
+            "description": "Internal Server Error",
           }
         }
       }
     },
-    "/pets/{petId}": {
+    "/permission/employee/{idPage}": {
       "get": {
-        "summary": "Info for a specific pet",
-        "operationId": "showPetById",
+        "summary": "Get list of employee permissions for a page",
         "tags": [
-          "pets"
+          "Permission"
         ],
         "parameters": [
           {
-            "name": "petId",
+            "name": "idPage",
             "in": "path",
             "required": true,
-            "description": "The id of the pet to retrieve",
-            "type": "string"
+            "description": "The ID Page to retrieve permissions",
+            "type": "Integer"
           }
         ],
         "responses": {
           "200": {
-            "description": "Expected response to a valid request",
-            "schema": {
-              "$ref": "#/definitions/Pets"
-            }
+            "description": "List of permissions succesfully processed",
           },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
-            }
+          "500": {
+            "description": "Internal Server Error",
+          }
+        }
+      },
+      "post": {
+        "summary": "Post an employee permission for a page",
+        "tags": [
+          "Permission"
+        ],
+        "parameters": [
+          {
+            "name": "idPage",
+            "in": "path",
+            "required": true,
+            "description": "The ID Page to retrieve permissions",
+            "type": "Integer"
+          },
+          {
+            "name": "target",
+            "in": "body",
+            "required": true,
+            "description": "Target element (ID Employee) to insert relation in database",
+            "type": "Integer"
+          },
+          {
+            "name": "rules",
+            "in": "body",
+            "required": true,
+            "description": "Set of rules to be applied to the page permission",
+            "type": "Integer"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Permission succesfully inserted",
+          },
+          "500": {
+            "description": "Internal Server Error",
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete an employee permission for a page",
+        "tags": [
+          "Permission"
+        ],
+        "parameters": [
+          {
+            "name": "idPage",
+            "in": "path",
+            "required": true,
+            "description": "The ID Page to delete permissions",
+            "type": "Integer"
+          },
+          {
+            "name": "target",
+            "in": "body",
+            "required": true,
+            "description": "Target element (ID Employee) to delete relation in database",
+            "type": "Integer"
+          },
+        ],
+        "responses": {
+          "200": {
+            "description": "Permission succesfully deleted",
+          },
+          "500": {
+            "description": "Internal Server Error",
           }
         }
       }
     }
   },
-  "definitions": {
-    "Pet": {
-      "required": [
-        "id",
-        "name"
-      ],
-      "properties": {
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "name": {
-          "type": "string"
-        },
-        "tag": {
-          "type": "string"
-        }
-      }
-    },
-    "Pets": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Pet"
-      }
-    },
-    "Error": {
-      "required": [
-        "code",
-        "message"
-      ],
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        }
-      }
-    }
-  }
 }

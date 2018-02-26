@@ -3,6 +3,8 @@
 <head>
 <title>Beliveo</title>
   <script src="node_modules/beliveo-files/utils/urlFix/index.js"></script>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="node_modules/jquery-confirm/css/jquery-confirm.css">
   <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="node_modules/beliveo-files/styles/main.css">
@@ -39,5 +41,6 @@ require '../../config/environment.php';
   </div>
 </div>
 <?php require_once '../../node_modules/beliveo-files/components/footer.php'; ?>
+<script src="node_modules/jquery-confirm/js/jquery-confirm.js"></script>
 </body>
 </html>
