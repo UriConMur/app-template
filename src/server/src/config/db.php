@@ -1,14 +1,4 @@
 <?php
-/**
- * DataBase
- *
- * @category   Class
- * @package    DataBase
- * @subpackage Controller
- * @author     Salvador Gonzalez <salvador.gonzalez@beliveo.com>
- * @license    https://github.com/SDBLV/bbox-login/blob/develop/LICENSE.md MIT
- * @link       http://www.beliveo.net/bbox-login
- */
 class DataBase
 {
 
@@ -17,9 +7,6 @@ class DataBase
     private $_db_pass = '';
     private $_db_name = '';
 
-    /**
-     * Funciton __construct
-     */
     function __construct()
     {
         $this->_db_host = $_ENV['DB_HOSTNAME'];
@@ -27,11 +14,6 @@ class DataBase
         $this->_db_pass = $_ENV['DB_USERPASS'];
         $this->_db_name = $_ENV['DB_SCHEMA'];
     }
-    /**
-     * Function connect
-     *
-     * @return $dbConnection
-     */
     public function connect()
     {
         $mysql_connect_str = "mysql:host=$this->_db_host; dbname=$this->_db_name; ";
